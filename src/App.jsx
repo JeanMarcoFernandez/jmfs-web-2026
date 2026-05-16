@@ -1,120 +1,89 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
+      <nav className="navbar">
+        <h1 className="logo">JMF</h1>
+
+        <ul className="nav-links">
+          <li>Inicio</li>
+          <li>Sobre mí</li>
+          <li>Tecnologías</li>
+          <li>Proyectos</li>
+          <li>Contacto</li>
+        </ul>
+      </nav>
+
+      <section className="hero-section">
+        <div className="hero-text">
+          <h3>¡Hola! Soy</h3>
+
+          <h1>
+            Jean Marco <br />
+            Fernandez Silva
+          </h1>
+
+          <h2>Desarrollador Web</h2>
+
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Apasionado por la tecnología, el desarrollo frontend y la creación
+            de experiencias web modernas y atractivas.
+          </p>
+
+          <div className="buttons">
+            <button className="primary-btn">
+              Ver proyectos
+            </button>
+
+            <button className="secondary-btn">
+              Contactarme
+            </button>
+          </div>
+        </div>
+
+        <div className="hero-image">
+          <div className="circle"></div>
+
+          <img
+            src="https://i.imgur.com/4ZQZ4Zy.png"
+            alt="profile"
+          />
+        </div>
+      </section>
+
+      <section className="cards">
+        <div className="card">
+          <h2>Sobre mí</h2>
+
+          <p>
+            Estudiante apasionado por el desarrollo de software y el diseño web
+            moderno.
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+        <div className="card">
+          <h2>Tecnologías</h2>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          <p>
+            React, JavaScript, HTML, CSS, Node.js y herramientas modernas de
+            desarrollo web.
+          </p>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="card">
+          <h2>Proyectos</h2>
+
+          <p>
+            Desarrollo de aplicaciones web modernas desplegadas con AWS y
+            GitHub Actions.
+          </p>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <footer className="footer">
+        © 2026 Jean Marco Fernandez Silva
+      </footer>
     </>
   )
 }
